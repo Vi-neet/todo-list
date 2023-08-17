@@ -25,7 +25,7 @@ function App() {
   return (
     <UserContext.Provider value={{email,setEmail}}>
       <BrowserRouter>
-        <nav>
+        <nav className="navbar">
           <Link to={'/'} className="home">Home</Link>
           {!email && (
             <>
@@ -34,7 +34,7 @@ function App() {
             </>
           )}
           {!!email && (
-            <a onClick={e => {e.preventDefault();logout();}}>Logout</a>
+            <a className="logout" onClick={e => {e.preventDefault();logout();}}>Logout</a>
           )}
         </nav>
         <main>

@@ -12,8 +12,9 @@
   background-attachment: fixed;
   color: white;
 }
-nav{
-  text-align:center;
+.navbar{
+  display: flex;
+  justify-content:center;
 }
 nav a{
   display: inline-block;
@@ -23,12 +24,14 @@ nav a{
 }
 main{
   width: 240px;
+  font-weight: bold;
   margin: 10px auto;
-  text-align: center;
+  text-align:center;
   border-radius: 4px;
   font-size: 30px;
+  color: #FFCCCC;
   line-height: 50px;
-  background-color:#873a10;
+  background-color: #D64D00;
   padding: 20px 150px 20px 150px;
   border-style: outset;
   border-width: 3px;
@@ -37,6 +40,7 @@ main{
   box-shadow: 1px 1px 5px rgb(69, 67, 67);
   position: relative;
   top:50px;
+  text-shadow: 5px 6px 0px black;
 }
 
 ul{
@@ -49,41 +53,47 @@ ul li{
 }
 .home,
 .login,
-.register{
+.register,
+.logout{
   color: white;
+  cursor: pointer;
+}
+.home{
+  margin-left: 50px;
 }
 .text-field {
   padding: 5px;
+  height: 30px;
+  width: 350px;
   font-family: 'Press Start 2P', cursive;
-  font-size: 16px;
+  font-size: 10px;
   border-width: 1px;
   border-color: #CCCCCC;
   background-color: #FFFFFF;
   color: #000000;
   border-style: outset;
   border-width: 2px;
-  border-radius: 13px;
+  border-radius: 4px;
   box-shadow: 0px 0px 1px rgba(66,66,66,.75);
   text-shadow: 1px 0px 2px rgba(0,0,0,.74);
   position: relative;
   left:-50px;
+
 }
 .text-field:focus {
   outline:none;
 }
 
 .btn{
-
   font-family: 'Press Start 2P', cursive;
   font-weight: 100;
   font-size: 14px;
   color: #ffffff;
- 
-  background-color: #9a3121;
+  background-color: #01a500;
   padding: 8px 15px;
   border: outset #b8b8b8 2px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  border-radius: 10px;
+  border-radius: 4px;
   transition : 265ms;
   transform: translateY(0);
   display: flex;
@@ -92,13 +102,41 @@ ul li{
   cursor: pointer;
   position: relative;
   right:-50px;
+  left:70px;
+  top:10px;
+  text-shadow: 3px 2px 0px black;
   }
   
-  /* .btn:hover{
+  .btn:hover{
   transition : 265ms;
-  padding: 10px 32px;
   transform : translateY(-0px);
-  background-color: #fff;
-  color: ;
-  border: solid 2px #adadad;
-  } */
+  background-color: #048604;
+  } 
+  .btn:ative{
+    background-color: #b72504;
+    border:inset 2px #adadad;
+
+  }
+
+  .register-btn{
+    position: relative;
+    left: 50px;
+  }
+
+  .todos{
+    position: relative;
+    top:30px;
+  }
+
+.todos-field{
+  display: flex;
+  justify-content: space-between;
+}
+  .delete-btn{
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 5px;
+}

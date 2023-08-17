@@ -125,5 +125,22 @@ app.post('/todos', (req,res) => {
   });
 });
 
+app.delete('/todos/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const payload = jwt.verify(req.cookies.token, secret);
+    const todo = await Todo.findOneAndDelete({
+      _id: new mongoose.Types.ObjectId(id),
+      user: new mongoose.Types.ObjectId(payload.id),
+    });
+    if (!todo) {
+      return res.status(404).json({ error: 'Todo not found' });
+    }
+    res.sendStatus(204);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 app.listen(4000);
 

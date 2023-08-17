@@ -32,7 +32,7 @@ function Register() {
       <form action="" onSubmit={e => registerUser(e)}>
         <input className="text-field"  type="email" placeholder="email" value={email} onChange={e => setEmail(e.target.value)}/><br />
         <input className="text-field"  type="password" placeholder="password" value={password} onChange={e => setPassword(e.target.value)}/><br />
-        <button className='btn' type="submit">register</button>
+        <button className='btn register-btn' type="submit">register</button>
       </form>
   );
 }
